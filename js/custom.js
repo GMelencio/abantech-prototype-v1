@@ -103,7 +103,7 @@ jQuery(document).ready(function ($) {
 		event.preventDefault();
 
 		var href = $(this).attr('href') + ' .single-project',
-			portfolioList = $('#portfolio-list'),
+			portfolioList = $('#embracing-steps'),
 			content = $('#loaded-content');
 
 		portfolioList.animate({
@@ -113,24 +113,22 @@ jQuery(document).ready(function ($) {
 			queue: false
 		});
 		portfolioList.fadeOut(400);
-		setTimeout(function () {
-			$('#loader').show();
-		}, 400);
+		$('#loader').show();
 		setTimeout(function () {
 			content.load(href, function () {
 				$('#loaded-content meta').remove();
 				$('#loader').hide();
-				content.fadeIn(600);
+				content.fadeIn(400);
+				window.location.href = "#embracing-reality";
 				$('#back-button').fadeIn(600);
 			});
-		}, 800);
-
+		}, 400);
 	});
 
 	$('#back-button').on('click', function (event) {
 		event.preventDefault();
 
-		var portfolioList = $('#portfolio-list')
+		var portfolioList = $('#embracing-steps')
 		content = $('#loaded-content');
 
 		content.fadeOut(400);
@@ -142,8 +140,8 @@ jQuery(document).ready(function ($) {
 				duration: 400,
 				queue: false
 			});
-			portfolioList.fadeIn(600);
-		}, 800);
+			portfolioList.fadeIn(400);
+		}, 400);
 	});
 });
 

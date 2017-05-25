@@ -664,12 +664,25 @@ section {
    2.1 SECTION: HOME PAGE
 -----------------------------------------*/
 .home {
-  background: url(../images/backgrounds/1.jpg) no-repeat top;
+  background: url(../images/backgrounds/1-bg.jpg) no-repeat top;
   background-size: cover;
+  background-position: center center;
 }
 .home .color-overlay {
   padding-top: 175px;
   padding-bottom: 125px;
+  background: rgba(38, 39, 50, 0);
+}
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
 }
 .home .intro {
   margin-top: 62px;
@@ -785,7 +798,20 @@ section {
 .steps {
   margin-top: 125px;
 }
-
+.embracing-reality .step-box-left {
+    color: #616161;
+}
+.embracing-reality .step-box-left:hover {
+  background: rgba(38, 39, 50, 0.95);
+  color: #ffffff;
+}
+.embracing-reality .step-box-right {
+    color: #616161;
+}
+.embracing-reality .step-box-right:hover {
+  background: rgba(38, 39, 50, 0.95);
+  color: #ffffff;
+}
 /* WORK STEPS BACKGROUND IMAGES */
 .steps .step-1-image {
   background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), url(../images/embracing-reality/step-1.jpg) no-repeat top;
@@ -819,6 +845,7 @@ section {
 .steps .step .step-box-left {
   position: relative;
   padding: 38px;
+  padding-top: 20px;
   float: left;
   margin-left: -293px;
   margin-top: -50px;
@@ -868,6 +895,9 @@ section {
 }
 .steps .step .content-area p {
   padding-right: 13px;
+}
+.view-more-details {
+  padding: 38px;
 }
 
 /*---------------------------------------
@@ -1147,7 +1177,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   display: none;
 }
 #loader .loader-icon {
-  background-color: #FFF;
+  background-color: transparent;
   margin: -35px -35px;
   top: 50%;
   left: 50%;

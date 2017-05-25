@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
      PRE LOADER
 	============================== -->
 	<div class="preloader">
-  	<div class="status">
+  	    <div class="status">
 			<div class="loader">
 				<svg class="circular" viewbox="25 25 50 50">
 					<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
@@ -51,7 +51,7 @@
      SECTION: HOME / HOMEPAGE
     ============================== -->
 	<section class="home fixed-bg" id="home">
-
+        <canvas id="home-canvas"></canvas>
 		<div class="color-overlay">
 			<!-- COLOR OVERLAY -->
 
@@ -84,13 +84,11 @@
 							</li>
 							<li><a href="#portfolio">Portfolio</a>
 							</li>
-              <li><a href="#team">Team</a>
+                            <li><a href="#team">Team</a>
 							</li>
 							<li><a href="#news">News</a>
 							</li>
 							<li><a href="#blog">Blog</a>
-							</li>
-              <li><a href="#contact">Contact</a>
 							</li>
 							<!-- <li><a href="http://example.com" class="external">External Link Example</a></li> -->
 						</ul>
@@ -99,22 +97,22 @@
 				</div>
 				<!-- /END CONTAINER -->
 			</div>
-			<!-- /END NAIVATION -->
+			<!-- /END NAVIGATION -->
 
-			<div class="container">
+			<div class="container main-title">
 				<div class="row">
 					<div class="col-lg-10 col-lg-offset-1 col-md-12">
 
 						<!-- INTRO HEADING -->
 						<h1 class="intro white-text text-center">Excuse the Disruption</h1>
-            <br /><br />
+                        <br /><br />
 						<!-- CALL TO ACTION -->
 						<div class="cta smooth-scroll">
 							<a href="#portfolio" class="btn btn-default standard-button blue-button">FOR YOU</a>
 							<a href="#efficio" class="btn btn-default standard-button blue-button">EFFICIO</a>
-              <a href="#about-us" class="btn btn-default standard-button blue-button">ABOUT US</a>
+                            <a href="#about-us" class="btn btn-default standard-button blue-button">ABOUT US</a>
 						</div>
-            <br /><br /><br /><br /><br /><br /><br />
+                        <br /><br /><br /><br /><br /><br /><br />
 					</div>
 				</div>
 
@@ -162,8 +160,8 @@
 							</p>
 						</div>
 
-            <div class="line blue-line-bottom">
-            </div>
+                        <div class="line blue-line-bottom">
+                        </div>
 
 					</div>
 				</div>
@@ -174,75 +172,99 @@
   <!-- =========================
      SECTION: MORE ABOUT US SECTION
     ============================== -->
-	<section class="embracing-reality fixed-bg">
+	<section class="embracing-reality fixed-bg" id="embracing-reality">
 		<div class="color-overlay">
 
 			<!-- HEADING -->
 			<h2 class="white-text wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">Embracing Reality in a Virtual World</h2>
 
-      <div class="container">
+            <div class="container">
 
-    			<div class="row steps">
+    			<div class="row steps" id="embracing-steps">
     				<div class="col-lg-6 col-lg-offset-3">
 
+                        <!-- LOADING ICON -->
+                        <div id="loader">
+                            <div class="loader-icon">
+                                <div class="loader">
+                                    <svg class="circular" viewbox="25 25 50 50">
+                                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
     					<!-- STEP 1 -->
-    					<div class="step step-1-image clearfix">
-    						<div class="step-box-left diffuse-shadow red-line-bottom white-bg wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-
-    							<div class="content-area">
-    								<h4 class="text-left">Health Care</h4>
-    								<p class="text-left">
-    									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet arcu neque, vel lacinia sem consequat id. Proin tristique velit et turpis iaculis mattis sed ac arcu.
-    								</p>
-    							</div>
-
-    						</div>
-    					</div>
+                        <a href="embracing-reality-1.html" title="Click to view details" class="more">
+                            <div class="step step-1-image clearfix">
+                                <div class="step-box-left diffuse-shadow red-line-bottom white-bg wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                                    <div class="content-area">
+                                        <h4 class="text-left">Health Care</h4>
+                                        <p class="text-left">
+                                            The visualization capacity of 3D technology is a great fit for healthcare professionals. Being able to evaluate a patient's condition with a skeletal scan in a 3D model is a bit like having x-ray glasses. But while it may be a good fit, it doesn't...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+    					
 
     					<!-- STEP 2 -->
-    					<div class="step step-2-image clearfix">
-    						<div class="step-box-right diffuse-shadow green-line-bottom white-bg wow fadeInRight" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.25s">
+                        <a href="embracing-reality-2.html" title="Click to view details" class="more">
+                            <div class="step step-2-image clearfix">
+                                <div class="step-box-right diffuse-shadow green-line-bottom white-bg wow fadeInRight" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.25s">
 
-    							<div class="content-area">
-    								<h4 class="text-left">Modeling</h4>
-    								<p class="text-left">
-    									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet arcu neque, vel lacinia sem consequat id. Proin tristique velit et turpis iaculis mattis sed ac arcu.
-    								</p>
-    							</div>
+                                    <div class="content-area">
+                                        <h4 class="text-left">Defense & Security</h4>
+                                        <p class="text-left">
+                                            The defense industry was among the first to adopt 3D technology as a training tool, simulating dangerous situations that require split second judgments. Police officers and other first responders at home also use 3D tools to train...
+                                        </p>
+                                    </div>
 
-    						</div>
-    					</div>
+                                </div>
+                            </div>
+                        </a>
 
     					<!-- STEP 3 -->
-    					<div class="step step-3-image clearfix">
-    						<div class="step-box-left diffuse-shadow purple-line-bottom white-bg wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.35s">
+                        <a href="embracing-reality-3.html" title="Click to view details" class="more">
+                            <div class="step step-3-image clearfix">
+                                <div class="step-box-left diffuse-shadow purple-line-bottom white-bg wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.35s">
 
-    							<div class="content-area">
-    								<h4 class="text-left">3D Developers</h4>
-    								<p class="text-left">
-    									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet arcu neque, vel lacinia sem consequat id. Proin tristique velit et turpis iaculis mattis sed ac arcu.
-    								</p>
-    							</div>
+                                    <div class="content-area">
+                                        <h4 class="text-left">3D Modeling</h4>
+                                        <p class="text-left">
+                                            Modeling is a 2D business, with flurries of activity followed by a long, unproductive wait to render output in 3D. Though CAD applications revolutionized the field over 40 years ago, not a lot has changed since that roll out. The applications are still complex, hard to learn...
+                                        </p>
+                                    </div>
 
-    						</div>
-    					</div>
+                                </div>
+                            </div>
+                        </a>
 
-    					<!-- STEP 2 -->
-    					<div class="step step-4-image clearfix">
-    						<div class="step-box-right diffuse-shadow yellow-line-bottom white-bg wow fadeInRight" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.45s">
+    					<!-- STEP 4 -->
+                        <a href="embracing-reality-4.html" title="Click to view details" class="more">
+                            <div class="step step-4-image clearfix">
+                                <div class="step-box-right diffuse-shadow yellow-line-bottom white-bg wow fadeInRight" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.45s">
 
-    							<div class="content-area">
-    								<h4 class="text-left">More Here</h4>
-    								<p class="text-left">
-    									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet arcu neque, vel lacinia sem consequat id. Proin tristique velit et turpis iaculis mattis sed ac arcu.
-    								</p>
-    							</div>
+                                    <div class="content-area">
+                                        <h4 class="text-left">NUI Devices</h4>
+                                        <p class="text-left">
+                                            How the human body moves is the basis for every Natural User Interface (NUI) device. But different devices capture intent or information in different ways. For some it’s hand movements, others eye movements, some incorporate voice...
+                                        </p>
+                                    </div>
 
-    						</div>
-    					</div>
+                                </div>
+                            </div>
+                        </a>
 
     				</div>
     			</div>
+
+                <!-- LOADED PROJECT WILL SHOW HERE -->
+                <div id="loaded-content">
+                </div>
+                <!-- BACK TO EMBRACING REALITY BUTTON ON LOADED PROJECT -->
+                <a id="back-button" class="back-button btn btn-default standard-button red-button" href="#"><span class="icon icon-arrow-left"></span> Go Back</a>
     		</div>
 		</div>
 	</section>
@@ -262,7 +284,7 @@
 
 				</div>
 			</div>
-      <br /><br /><br />
+            <br /><br /><br />
 		</div>
 	</section>
 
@@ -967,10 +989,13 @@
   <!-- =========================
      JS SCRIPTS
   ============================== -->
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/third-party-scripts.js"></script>
-	<script src="js/custom.js"></script>
-
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/third-party-scripts.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/bg-1.js"></script>
 </body>
 
 </html>
