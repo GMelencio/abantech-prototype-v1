@@ -215,8 +215,9 @@ $(document).ready(function () {
 	});
 
 	setTimeout(function () {
-	    $(".right.carousel-control").trigger("click");
-	}, 5000);
+	    $(".efficio .right.carousel-control").trigger("click");
+	    $(".portfolio .right.carousel-control").trigger("click");
+	}, 3000);
 });
 
 /* =================================

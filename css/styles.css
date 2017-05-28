@@ -1560,6 +1560,39 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .news h6.sub-heading {
   color: #ffffff;
 }
+.news .collapse-title {
+    color: #1f65a5;
+    text-decoration: none;
+}
+.news .collapse-title:hover {
+    color: #3886ce;
+    text-decoration: none;
+}
+.news .post-content {
+  padding: 20px;
+  padding-top: 10px;
+}
+.news .post-content h6 {
+  padding-top: 10px;
+}
+.news .section-header{
+    margin-bottom: -20px;
+}
+.news .post-info {
+    margin-bottom: -10px;
+}
+.news a {
+    color: #3886ce;
+    font-weight: 500;
+}
+.news ul {
+      margin-left: 25px;
+    }
+    .news li {
+      list-style-type: disc;
+      list-style: disc;
+      text-align: left;
+    }
 
 /*---------------------------------------
    2.13 SECTION: BLOG
@@ -1731,6 +1764,26 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .footer .footer-logo img {
   max-height: 38px;
 }
+.footer-logo img {
+  max-height: 25px;
+  margin-top: 7px;
+}
+.footer-sticky .blue-text{
+    font-size: 14px;
+}
+.footer-sticky .footer-col a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-left: 20px;
+}
+.footer-sticky .footer-col a:hover {
+    color: #3886ce;
+}
+.footer-sticky .socials {
+    margin-top: 12px;
+    margin-right: 150px;
+}
 
 .fixed-bg {
   background-attachment: fixed;
@@ -1851,6 +1904,10 @@ FOR MOBILE SCREENS
         padding-top: 170px;
         padding-bottom: 0px;
     }
+    .footer-sticky .footer-col a {
+        padding-left: 5px;
+        margin: 0px;
+    }
 }
 
 @media screen and (max-device-width: 544px) {
@@ -1903,18 +1960,33 @@ FOR MOBILE SCREENS
             padding-bottom: 0px;
         }
     .single-project .step-1-image {
-        padding-top: 10px;
+      padding-top: 10px;
     }
-}
-
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 1012px) {
-    
-}
-
-@media (min-width: 1280px) {
-    
+    .efficio h3 {
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+    .efficio .middleware-image {
+        margin-top: 20px;
+    }
+    #portfolio-steps {
+      margin-top: 10px;
+    }
+    .portfolio .step-1-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -10px;
+            padding-top: 160px;
+        }
+    .portfolio .step-2-image {
+        background-size: 350px;
+        background-position-y: -10px;
+        margin-top: -40px;
+        padding-top: 170px;
+        padding-bottom: 0px;
+    }
+    .footer-sticky .footer-col {
+        margin: 0px;
+        padding: 0px;
+    }
 }
