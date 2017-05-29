@@ -99,7 +99,7 @@ function mailchimpCallback(resp) {
 ================================= */
 
 jQuery(document).ready(function ($) {
-	$('.more').on('click', function (event) {
+    $('#embracing-reality .more').on('click', function (event) {
 		event.preventDefault();
 
 		var href = $(this).attr('href') + ' .single-project',
@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
 		}, 400);
 	});
 
-	$('#back-button').on('click', function (event) {
+    $('#embracing-reality #back-button').on('click', function (event) {
 		event.preventDefault();
 
 		var portfolioList = $('#embracing-steps')
@@ -142,7 +142,52 @@ jQuery(document).ready(function ($) {
 			});
 			portfolioList.fadeIn(400);
 		}, 400);
-	});
+    });
+
+    $('#portfolio .more').on('click', function (event) {
+        event.preventDefault();
+
+        var href = $(this).attr('href') + ' .single-project',
+			portfolioList = $('#portfolio-steps'),
+			content = $('#portfolio-loaded-content');
+
+        portfolioList.animate({
+            'marginLeft': '-120%'
+        }, {
+            duration: 400,
+            queue: false
+        });
+        portfolioList.fadeOut(400);
+        $('#portfolio-loader').show();
+        setTimeout(function () {
+            content.load(href, function () {
+                $('#portfolio-loaded-content meta').remove();
+                $('#portfolio-loader').hide();
+                content.fadeIn(400);
+                window.location.href = "#portfolio";
+                $('#portfolio-back-button').fadeIn(600);
+            });
+        }, 400);
+    });
+
+    $('#portfolio-back-button').on('click', function (event) {
+        event.preventDefault();
+
+        var portfolioList = $('#portfolio-steps')
+        content = $('#portfolio-loaded-content');
+
+        content.fadeOut(400);
+        $('#portfolio-back-button').fadeOut(400);
+        setTimeout(function () {
+            portfolioList.animate({
+                'marginLeft': '0'
+            }, {
+                duration: 400,
+                queue: false
+            });
+            portfolioList.fadeIn(400);
+        }, 400);
+    });
 });
 
 /* ================================
@@ -169,7 +214,10 @@ $(document).ready(function () {
 
 	});
 
-
+	setTimeout(function () {
+	    $(".efficio .right.carousel-control").trigger("click");
+	    $(".portfolio .right.carousel-control").trigger("click");
+	}, 3000);
 });
 
 /* =================================

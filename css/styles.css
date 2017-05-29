@@ -654,7 +654,9 @@ section {
   outline: none;
   border: 2px solid #feb960;
 }
-
+.color-overlay {
+  background: rgba(38, 39, 50, 0.35);
+}
 /* --------------------------------------
 =========================================
    2. SECTIONS
@@ -686,6 +688,7 @@ section {
 .home .intro {
   margin-top: 62px;
   margin-bottom: 18px;
+  text-shadow: 2px 2px 2px #616161;
 }
 .home .cta {
   text-align: center;
@@ -704,9 +707,7 @@ section {
   font-size: 45px;
   margin-bottom: 28px;
 }
-.color-overlay {
-  background: rgba(38, 39, 50, 0.35);
-}
+
 /* LOGO AND STICKY NAVIGATION */
 .sticky-navigation {
   background: #000000;
@@ -720,8 +721,14 @@ section {
   margin-top: 9px;
 }
 .sticky-navigation .navbar-brand img {
-  max-height: 26px;
+  max-height: 36px;
 }
+
+.sticky-navigation .navbar-brand div {
+    background-image: url("../images/abantech_logo_clear.png");
+   
+}
+
 .sticky-navigation .current a {
   color: #00abff !important;
 }
@@ -740,26 +747,54 @@ section {
    2.2 SECTION: ABOUT US
 -----------------------------------------*/
 .about-us {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 25px;
 }
-.about-us .featured-image {
-  position: relative;
-  width: 100%;
-}
-.about-us .featured-image img {
-  width: 100%;
-  display: block;
-}
+    .about-us .featured-image {
+      position: relative;
+      width: 100%;
+      margin-top: 70px;
+    }
+    .about-us .featured-image img {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .about-us .row {
+      margin-bottom: 40px;
+    }
+    .about-us .section-header h3 {
+      margin-top: -10px;
+    }
+    .about-us .extra-small-text {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .about-us .bold-face {
+      font-weight: 500;
+    }
+    .about-us span.highlighted-text {
+      font-size: 19px !important;
+    }
+    .about-us ul {
+      margin-top: -90px;
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+    .about-us li {
+      list-style-type: disc;
+      list-style: disc;
+      text-align: left;
+    }
 .overflow-box {
-  margin-left: -200px;
+  margin-left: -50px;
   position: relative;
   z-index: 10;
 }
 .about-box {
   background: #ffffff;
   position: relative;
-  margin-top: 75px;
+  margin-top: -15px;
   z-index: 10;
   overflow: hidden;
 }
@@ -767,11 +802,15 @@ section {
   padding-top: 60px;
   padding-left: 82px;
   padding-right: 82px;
+  margin-bottom: -50px;
 }
 .about-box p {
   margin-top: 22px;
   margin-bottom: 100px;
   position: relative;
+}
+.about-team-member {
+  line-height: 20px;
 }
 /*---------------------------------------
   2.3. SECTION: EMBRACING REALITY
@@ -780,16 +819,19 @@ section {
   background: url("../images/backgrounds/2.jpg") top no-repeat;
   background-size: cover;
 }
-.embracing-reality .color-overlay {
-  padding-top: 120px;
-  padding-bottom: 147px;
-}
-.embracing-reality h3 {
-  margin-bottom: 35px;
-}
-.embracing-reality .text {
-  margin-top: 15px;
-}
+    .embracing-reality h2 {
+      text-shadow: 2px 2px 2px #616161;
+    }
+    .embracing-reality .color-overlay {
+      padding-top: 50px;
+      padding-bottom: 75px;
+    }
+    .embracing-reality h3 {
+      margin-bottom: 35px;
+    }
+    .embracing-reality .text {
+      margin-top: 15px;
+    }
 .work-steps {
   padding-top: 114px;
   padding-bottom: 150px;
@@ -797,17 +839,17 @@ section {
 .steps {
   margin-top: 125px;
 }
-.embracing-reality .step-box-left {
+.step-box-left {
     color: #616161;
 }
-.embracing-reality .step-box-left:hover {
+.step-box-left:hover {
   background: rgba(38, 39, 50, 0.95);
   color: #ffffff;
 }
-.embracing-reality .step-box-right {
+.step-box-right {
     color: #616161;
 }
-.embracing-reality .step-box-right:hover {
+.step-box-right:hover {
   background: rgba(38, 39, 50, 0.95);
   color: #ffffff;
 }
@@ -855,6 +897,7 @@ section {
 .steps .step .step-box-right {
   position: relative;
   padding: 38px;
+  padding-top: 20px;
   float: right;
   margin-right: -293px;
   margin-top: -50px;
@@ -904,9 +947,22 @@ section {
 -----------------------------------------*/
 .efficio {
   position: relative;
-  padding-top: 114px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+    .efficio .section-number {
+        padding: 20px;
+    }
+    .efficio a {
+        color: #3886ce;
+        font-weight: 500;
+    }
+    .efficio .section-header {
+        margin-bottom: 40px;
+    }
+    .efficio .middleware-image {
+        margin-top: 45px;
+    }
 .focuses .single-focus {
   padding-left: 28px;
   padding-right: 28px;
@@ -937,7 +993,9 @@ section {
 .efficio .text {
   margin-top: 15px;
 }
-
+.efficio .slideshow-container {
+    background-color: #000000;
+}
 /*---------------------------------------
    2.5 SECTION: VIDEO
 -----------------------------------------*/
@@ -975,7 +1033,15 @@ section {
 .portfolio {
   background: url("../images/backgrounds/3.jpg") top no-repeat;
   background-size: cover;
+  padding-bottom: 20px !important;
 }
+    .portfolio h2 {
+      text-shadow: 2px 2px 2px #616161;
+    }
+    .efficio a {
+        color: #3886ce;
+        font-weight: 500;
+    }
 .portfolio .color-overlay {
   padding-top: 120px;
   padding-bottom: 147px;
@@ -997,6 +1063,17 @@ section {
 }
 .portfolio .portfolio-items li img {
   width: 100%;
+}
+#portfolio-steps {
+  margin-top: 70px;
+}
+.product-showcase {
+  padding-top: 20px;
+}
+.video-caption {
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
 }
 .grid {
   position: relative;
@@ -1169,13 +1246,43 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   transition-delay: 0.2s;
 }
 
+/* CASE STUDIES */
+.portfolio .step-1-image {
+  background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), url(../images/portfolio/case-study-1.jpg) no-repeat top;
+  background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(252, 95, 69, 0.1) 100%), url(../images/portfolio/case-study-1.jpg) no-repeat top;
+  background-size: cover;
+}
+.portfolio .step-2-image {
+  background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(56, 198, 149, 0.1) 100%), -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(56, 198, 149, 0.1) 100%), url(../images/portfolio/case-study-2.jpg) no-repeat top;
+  background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(56, 198, 149, 0.1) 100%), linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(56, 198, 149, 0.1) 100%), url(../images/portfolio/case-study-2.jpg) no-repeat top;
+  background-size: cover;
+}
+
+.portfolio .row {
+    margin-bottom: 20px;
+}
+
+.demo-slideshow {
+    padding: 20px;
+    background-color: #000000;
+}
+.portfolio .carousel-indicators {
+    bottom: -15px;
+}
+.portfolio .glyphicon-chevron-left {
+    left: 30px;
+}
+.portfolio .glyphicon-chevron-right {
+    right: 30px;
+}
+
 /* SINGLE PROJECT */
-#loader {
+#loader, #portfolio-loader {
   min-height: 930px;
   position: relative;
   display: none;
 }
-#loader .loader-icon {
+#loader .loader-icon, #portfolio-loader .loader-icon {
   background-color: transparent;
   margin: -35px -35px;
   top: 50%;
@@ -1302,6 +1409,14 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 /*---------------------------------------
    2.10 SECTION: TESTIMONIALS
 -----------------------------------------*/
+.testimonials {
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+.after-about-us {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
 .testimonials .section-number {
   color: #5d5d62;
 }
@@ -1438,7 +1553,7 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
    2.12 SECTION: NEWS
 -----------------------------------------*/
 .news {
-  background: url("../images/backgrounds/6.jpg") top no-repeat;
+  background: url("../images/backgrounds/5.jpg") top no-repeat;
   background-size: cover;
 }
 .news .color-overlay {
@@ -1451,6 +1566,39 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .news h6.sub-heading {
   color: #ffffff;
 }
+.news .collapse-title {
+    color: #1f65a5;
+    text-decoration: none;
+}
+.news .collapse-title:hover {
+    color: #3886ce;
+    text-decoration: none;
+}
+.news .post-content {
+  padding: 20px;
+  padding-top: 10px;
+}
+.news .post-content h6 {
+  padding-top: 10px;
+}
+.news .section-header{
+    margin-bottom: -20px;
+}
+.news .post-info {
+    margin-bottom: -10px;
+}
+.news a {
+    color: #3886ce;
+    font-weight: 500;
+}
+.news ul {
+      margin-left: 25px;
+    }
+    .news li {
+      list-style-type: disc;
+      list-style: disc;
+      text-align: left;
+    }
 
 /*---------------------------------------
    2.13 SECTION: BLOG
@@ -1622,7 +1770,229 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .footer .footer-logo img {
   max-height: 38px;
 }
+.footer-logo img {
+  max-height: 25px;
+  margin-top: 7px;
+}
+.footer-sticky .blue-text{
+    font-size: 14px;
+}
+.footer-sticky .footer-col a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-left: 20px;
+}
+.footer-sticky .footer-col a:hover {
+    color: #3886ce;
+}
+.footer-sticky .socials {
+    margin-top: 12px;
+    margin-right: 150px;
+}
 
 .fixed-bg {
   background-attachment: fixed;
+}
+/*****************
+    BUTTONS
+*****************/
+.btn-blurple {
+    color: #fff;
+    background-color: #3b41af;
+    background-image: -webkit-linear-gradient(270deg, #6570e2 0%, #3b41af 90%);
+    background-image: linear-gradient(-180deg, #6570e2 0%, #3b41af 90%)
+}
+
+.btn-blurple:focus,.btn-blurple.focus {
+    box-shadow: 0 0 0 0.2em rgba(101,112,226,0.3)
+}
+
+.btn-blurple:hover,.btn-blurple.hover {
+    color: #ffffff;
+    background-color: #383ea7;
+    background-image: -webkit-linear-gradient(270deg, #5c68e0 0%, #383ea7 90%);
+    background-image: linear-gradient(-180deg, #5c68e0 0%, #383ea7 90%);
+    background-position: 0 -3.1em;
+    border-color: rgba(27,31,35,0.5)
+}
+
+.btn-blurple:active,.btn-blurple.selected {
+    background-color: #3a43bb;
+    background-image: none;
+    border-color: rgba(27,31,35,0.5);
+    box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,0.15)
+}
+
+.btn-blurple:disabled,.btn-blurple.disabled {
+    color: rgba(255,255,255,0.75);
+    background-color: #9da0d7;
+    background-image: none;
+    border-color: rgba(27,31,35,0.2);
+    box-shadow: none
+}
+
+/*****************
+FOR MOBILE SCREENS
+*****************/
+@media screen and (max-device-width: 360px) {
+    .home-button-group {
+        display: none;
+    }
+    .about-us {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+    .after-about-us h4 {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+    .testimonials h4 {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+    .embracing-reality {
+      min-height: 400px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+        .embracing-reality h4 {
+          margin-top: 10px;
+        }
+        .embracing-reality .step-1-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 185px;
+        }
+        .embracing-reality .step-2-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+        }
+        .embracing-reality .step-3-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+        }
+        .embracing-reality .step-4-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+            padding-bottom: 0px;
+        }
+    .single-project .step-1-image {
+      padding-top: 10px;
+    }
+    .efficio h3 {
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+    .efficio .middleware-image {
+        margin-top: 20px;
+    }
+    #portfolio-steps {
+      margin-top: 10px;
+    }
+    .portfolio .step-1-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -10px;
+            padding-top: 160px;
+        }
+    .portfolio .step-2-image {
+        background-size: 350px;
+        background-position-y: -10px;
+        margin-top: -40px;
+        padding-top: 170px;
+        padding-bottom: 0px;
+    }
+    .footer-sticky .footer-col a {
+        padding-left: 5px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-device-width: 544px) {
+    .home-button-group {
+        display: none;
+    }
+    .about-us {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+    .after-about-us h4 {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+    .testimonials h4 {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+    .embracing-reality {
+      min-height: 400px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+        .embracing-reality h4 {
+          margin-top: 10px;
+        }
+        .embracing-reality .step-1-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 185px;
+        }
+        .embracing-reality .step-2-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+        }
+        .embracing-reality .step-3-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+        }
+        .embracing-reality .step-4-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -40px;
+            padding-top: 200px;
+            padding-bottom: 0px;
+        }
+    .single-project .step-1-image {
+      padding-top: 10px;
+    }
+    .efficio h3 {
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+    .efficio .middleware-image {
+        margin-top: 20px;
+    }
+    #portfolio-steps {
+      margin-top: 10px;
+    }
+    .portfolio .step-1-image {
+            background-size: 350px;
+            background-position-y: -10px;
+            margin-top: -10px;
+            padding-top: 160px;
+        }
+    .portfolio .step-2-image {
+        background-size: 350px;
+        background-position-y: -10px;
+        margin-top: -40px;
+        padding-top: 170px;
+        padding-bottom: 0px;
+    }
+    .footer-sticky .footer-col {
+        margin: 0px;
+        padding: 0px;
+    }
 }
