@@ -708,6 +708,40 @@ section {
   margin-bottom: 28px;
 }
 
+.navbar-brand {
+    color: #ffffff;
+    font-size: 20px;
+    width: 200px;
+    font-weight: 200;
+    text-align: center;
+    font-family: 'Michroma', 'Libre Baskerville', Georgia;
+    padding-top: 15px;
+    background-image: url("../images/abantech_logo_clear.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 56px;
+    background-position-x: 82px;
+    display: inline-block;
+}
+
+.footer-navbar-brand {
+    color: #ffffff;
+    font-size: 12px !important;
+    width: 200px;
+    font-weight: 200;
+    text-align: center;
+    font-family: 'Michroma', 'Libre Baskerville', Georgia;
+    padding-top: 8px;
+    background-image: url("../images/abantech_logo_clear.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 41px;
+    background-position-x: 97px;
+    background-position-y: 4px;
+    display: inline-block;
+    height: 45px;
+}
+
 /* LOGO AND STICKY NAVIGATION */
 .sticky-navigation {
   background: #000000;
@@ -723,12 +757,9 @@ section {
 .sticky-navigation .navbar-brand img {
   max-height: 36px;
 }
-
 .sticky-navigation .navbar-brand div {
     background-image: url("../images/abantech_logo_clear.png");
-   
 }
-
 .sticky-navigation .current a {
   color: #00abff !important;
 }
@@ -933,7 +964,7 @@ section {
   transform: rotate(45deg);
 }
 .steps .step .content-area {
-  margin-top: 28px;
+  margin-top: 10px;
 }
 .steps .step .content-area p {
   padding-right: 13px;
@@ -1042,6 +1073,12 @@ section {
         color: #3886ce;
         font-weight: 500;
     }
+    .efficio a:hover {
+        text-decoration: underline;
+    }
+    .efficio .add-shadow {
+        box-shadow: 0px 5px 15px rgba(59, 65, 175, .9);
+    }
 .portfolio .color-overlay {
   padding-top: 120px;
   padding-bottom: 147px;
@@ -1074,6 +1111,20 @@ section {
     padding: 5px;
     text-align: center;
     background-color: #ffffff;
+}
+.video-description {
+    padding: 10px;
+    padding-top: 0px;
+    text-align: left;
+    min-height: 95px;
+    line-height: 1.5em;
+}
+.video-box{
+    background-color: #ffffff;
+    padding: 10px;
+}
+.video-box .featured-post{
+    margin-bottom: 0px;
 }
 .grid {
   position: relative;
@@ -1264,16 +1315,20 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 .demo-slideshow {
     padding: 20px;
-    background-color: #000000;
+    height: 340px;
 }
 .portfolio .carousel-indicators {
-    bottom: -15px;
+    bottom: -20px;
+}
+.portfolio .carousel-control {
+    text-shadow: none;
+    background-color: none;
 }
 .portfolio .glyphicon-chevron-left {
-    left: 30px;
+    left: -100px;
 }
 .portfolio .glyphicon-chevron-right {
-    right: 30px;
+    right: -100px;
 }
 
 /* SINGLE PROJECT */
@@ -1790,6 +1845,9 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
     margin-top: 12px;
     margin-right: 150px;
 }
+.footer-sticky .navbar-inverse {
+    background-color: #000000;
+}
 
 .fixed-bg {
   background-attachment: fixed;
@@ -1798,10 +1856,10 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
     BUTTONS
 *****************/
 .btn-blurple {
-    color: #fff;
+    color: #ffffff;
     background-color: #3b41af;
     background-image: -webkit-linear-gradient(270deg, #6570e2 0%, #3b41af 90%);
-    background-image: linear-gradient(-180deg, #6570e2 0%, #3b41af 90%)
+    background-image: linear-gradient(-180deg, #6570e2 0%, #3b41af 90%);
 }
 
 .btn-blurple:focus,.btn-blurple.focus {
@@ -1811,13 +1869,12 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .btn-blurple:hover,.btn-blurple.hover {
     color: #ffffff;
     background-color: #383ea7;
-    background-image: -webkit-linear-gradient(270deg, #5c68e0 0%, #383ea7 90%);
-    background-image: linear-gradient(-180deg, #5c68e0 0%, #383ea7 90%);
-    background-position: 0 -3.1em;
+    box-shadow: 0px 5px 15px rgba(59, 65, 175, .9);
     border-color: rgba(27,31,35,0.5)
 }
 
 .btn-blurple:active,.btn-blurple.selected {
+    color: #ffffff;
     background-color: #3a43bb;
     background-image: none;
     border-color: rgba(27,31,35,0.5);
