@@ -721,8 +721,14 @@ section {
   margin-top: 9px;
 }
 .sticky-navigation .navbar-brand img {
-  max-height: 26px;
+  max-height: 36px;
 }
+
+.sticky-navigation .navbar-brand div {
+    background-image: url("../images/abantech_logo_clear.png");
+   
+}
+
 .sticky-navigation .current a {
   color: #00abff !important;
 }
