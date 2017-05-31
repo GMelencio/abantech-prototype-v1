@@ -214,10 +214,12 @@ $(document).ready(function () {
 
 	});
 
-	setTimeout(function () {
-	    $(".efficio .right.carousel-control").trigger("click");
-	    $(".portfolio .right.carousel-control").trigger("click");
-	}, 3000);
+	$(window).on('load resize', function () {
+	    setTimeout(function () {
+	        $(".efficio .right.carousel-control").trigger("click");
+	        $(".portfolio .right.carousel-control").trigger("click");
+	    }, 3000);
+	});
 });
 
 /* =================================
