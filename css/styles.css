@@ -1021,6 +1021,9 @@ section {
 .efficio .slideshow-container {
     background-color: #000000;
 }
+.efficio .mobile-slideshow {
+    display: none;
+}
 /*---------------------------------------
    2.5 SECTION: VIDEO
 -----------------------------------------*/
@@ -1063,14 +1066,14 @@ section {
     .portfolio h2 {
       text-shadow: 2px 2px 2px #616161;
     }
-    .efficio a {
+    .portfolio a {
         color: #3886ce;
         font-weight: 500;
     }
-    .efficio a:hover {
+    .portfolio a:hover {
         text-decoration: underline;
     }
-    .efficio .add-shadow {
+    .portfolio .add-shadow {
         box-shadow: 0px 5px 15px rgba(59, 65, 175, .9);
     }
 .portfolio .color-overlay {
@@ -2007,5 +2010,11 @@ FOR MOBILE SCREENS
     }
     .footer-sticky .socials {
         float: none;
-    }                                                                               
+    }
+    #slideshow-container {
+        display: none;
+    }
+    .mobile-slideshow {
+        display: inline;
+    }
 }
