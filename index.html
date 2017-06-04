@@ -177,16 +177,36 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-7 col-md-7">
-                                    <div id="slideshow-container">
-                                        <div id="cube" class="animate">
-                                            <a class="imgLink"></a>
-                                            <a class="imgLink"></a>
-                                            <a class="imgLink"></a>
-                                            <a class="imgLink"></a>
-                                            <a class="imgLink"></a>
-                                            <a class="imgLink"></a>
-                                        </div>
-                                    </div>
+								
+									<section class="slideshow-carousel-container">
+										<div id="slideshow-carousel">
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide1-efficio.jpg" /></figure>
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide2-efficio.jpg" /></figure>
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide3-efficio.jpg" /></figure>
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide4-efficio.jpg" /></figure>
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide5-efficio.jpg" /></figure>
+										  <figure><img alt="Efficio Slide 1" src="images/efficio/slide6-efficio.jpg" /></figure>
+										</div>
+									</section>
+									<section id="options">
+										<p>
+										  <input type="range" id="panel-count" value="6" min="1" max="6"" />
+										</p>
+
+										<p id="navigation">
+										  <button id="previous" data-increment="-1">Previous</button>
+										  <button id="next" data-increment="1">Next</button>
+										</p>
+
+										<p>
+										  <button id="toggle-axis">Toggle Carousel Axis</button>
+										</p>
+
+										<p>
+										  <button id="toggle-backface-visibility">Toggle Backface Visibility</button>
+										</p>
+									</section>
+									
                                     <div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left mobile-slideshow">
                                         <div class="slideshow-container">
                                             <div class="carousel slide" id="carousel-868178">
@@ -476,7 +496,10 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6 col-md-6 video-box">
+				<div class="col-lg-2 col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-lg-4 col-md-2 video-box">
                     <div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left">
                         <div class="embed-responsive youtube" data-embed="uS2npf5ZUV0">
                             <div class="play-button"></div>
@@ -489,7 +512,7 @@
                         </div>
                     </div>
                 </div>
-				<div class="col-lg-6 col-md-6 video-box">
+				<div class="col-lg-4 col-md-2 video-box">
 					<div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left">
 						<div class="embed-responsive youtube" data-embed="FOnKYiYp3XY">
 							<div class="play-button"></div>
@@ -502,9 +525,12 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-2 col-md-1">
+                    &nbsp;
+                </div>
 			</div>
 			<div class="row">
-                <div class="col-lg-6 col-md-6 video-box">
+                <div class="col-lg-4 col-md-2 video-box">
                     <div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left">
                         <div class="embed-responsive youtube" data-embed="kwVS3G6GBq0">
                             <div class="play-button"></div>
@@ -517,7 +543,7 @@
                         </div>
                     </div>
                 </div>
-				<div class="col-lg-6 col-md-6 video-box">
+				<div class="col-lg-4 col-md-2 video-box">
 					<div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left">
 						<div class="embed-responsive youtube" data-embed="DEfMJoz66xU">
 							<div class="play-button"></div>
@@ -530,12 +556,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    &nbsp;
-                </div>
-                <div class="col-lg-6 col-md-6 video-box">
+				<div class="col-lg-4 col-md-2 video-box">
                     <div class="featured-post blue-line-bottom white-bg diffuse-shadow text-left">
                         <div class="embed-responsive youtube" data-embed="Bv837EYf17Y">
                             <div class="play-button"></div>
@@ -548,10 +569,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    &nbsp;
-                </div>
-            </div>
+			</div>
 
             <!-- SECTION HEADER -->
             <div class="section-header">
@@ -736,7 +754,6 @@
                                             </div>
                                         </div>
                                     </div>
-								</div>
                                 </div> <a class="left carousel-control" href="#carousel-demovids2" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-demovids2" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                             </div>
                         </div>
@@ -936,7 +953,7 @@
                     <div class="panel-group text-left" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-6">
-								<input type="radio" name="panel" id="panel-6">
+								<div class="icon">-</div>
                                 <h4 class="panel-title collapse-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="true" aria-controls="collapse-6">
 									<span class="bold-faced">Efficio Debuts at Fosterly's VR/AR and Creatives Study Hall</span>
                                     <span class="date extra-small-text black-text"> - May 25, 2017</span>
@@ -984,7 +1001,7 @@
 
 						<div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-5">
-								<input type="radio" name="panel" id="panel-5">
+								<div class="icon">+</div>
 								<h4 class="panel-title collapse-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="true" aria-controls="collapse-5">
 									<span class="bold-faced">Virtual Reality Sidelines Guess Work on Injury Assessment</span>
                                     <span class="date extra-small-text black-text"> - February 20, 2017</span>
@@ -1058,7 +1075,7 @@
 
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-4">
-								<input type="radio" name="panel" id="panel-4">
+								<div class="icon">+</div>
 								<h4 class="panel-title collapse-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
 									<span class="bold-faced">Siminars: Next Generation Webinars from Agora and Efficio</span>
                                     <span class="date extra-small-text black-text"> - December 10, 2016</span>
@@ -1107,7 +1124,7 @@
 
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-3">
-								<input type="radio" name="panel" id="panel-3">
+								<div class="icon">+</div>
 								<h4 class="panel-title collapse-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
 									<span class="bold-faced">Efficio: A Device Agnostic Platform for 3D</span>
                                     <span class="date extra-small-text black-text"> - August 1, 2016</span>
@@ -1178,7 +1195,7 @@
 
 						<div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-2">
-								<input type="radio" name="panel" id="panel-2">
+								<div class="icon">+</div>
 								<h4 class="panel-title collapse-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
 									<span class="bold-faced">Lean Start Up Model: Learn from Customers</span>
                                     <span class="date extra-small-text black-text"> - July 6, 2016</span>
@@ -1223,7 +1240,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1262,6 +1278,7 @@
   ============================== -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/third-party-scripts.js"></script>
+	<script src="js/utils.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>

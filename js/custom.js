@@ -24,32 +24,6 @@ var wow = new WOW(
 wow.init();
 
 /* ================================
-===  VIDEO PLAY BUTTON         ====
-================================= */
-$('.play-button').click(function () {
-
-	var url = $('#video-expand .embed-responsive-item').attr('src');
-	url = url.replace('autoplay=0', 'autoplay=1');
-	$('#video-expand .embed-responsive-item').attr('src', url);
-
-	var collapsed = $(this).find('span').hasClass('icon-music-play-button');
-
-	$('.play-button').find('span').removeClass('icon-arrows-circle-remove');
-
-	$('.play-button').find('span').addClass('icon-music-play-button');
-
-	if (collapsed) {
-		$(this).find('span').toggleClass('icon-music-play-button icon-arrows-circle-remove');
-	}
-	if (!collapsed) {
-		var urlstop = $('#video-expand .embed-responsive-item').attr('src');
-		urlstop = urlstop.replace('autoplay=1', 'autoplay=0');
-		$('#video-expand .embed-responsive-item').attr('src', urlstop);
-	}
-
-});
-
-/* ================================
 ===  IN PAGE SCROLL OPTIONS    ====
 ================================= */
 $(document).ready(function () {
@@ -193,7 +167,7 @@ jQuery(document).ready(function ($) {
 /* ================================
 ===  TESTIMONIALS              ====
 ================================= */
-
+var demo1Played = false, demo2Played = false;
 $(document).ready(function () {
 
 	$("#feedbacks").owlCarousel({
@@ -212,13 +186,6 @@ $(document).ready(function () {
 		paginationSpeed: 400,
 		singleItem: true
 
-	});
-
-	$(window).on('load resize', function () {
-	    setTimeout(function () {
-	        $(".efficio .right.carousel-control").trigger("click");
-	        $(".portfolio .right.carousel-control").trigger("click");
-	    }, 3000);
 	});
 
     // YOUTUBE LAZY LOADING
@@ -245,12 +212,54 @@ $(document).ready(function () {
 
 	        this.innerHTML = "";
 	        this.appendChild(iframe);
+			
+			console.log(this);
+			if($(this).parents("#carousel-demovids").length) {
+				demo1Played = true;
+			}
+			else {
+				demo2Played = true;
+			}
 	    });
 	}
+	
+	$('.panel-title').on('click', function(e) {
+		if($(this).siblings().text() == "+") {
+			$(".icon").text("+");
+			$(this).siblings().text("-");
+		} else {
+			$(this).siblings().text("+");
+		}
+	});
+});
+
+$(window).load(function() { //start after HTML, images have loaded
+ 
+    var InfiniteRotator =
+    {
+        init: function()
+        {
+            //interval between items (in milliseconds)
+            var itemInterval = 3000;
+
+            //loop through the items
+            var infiniteLoop = setInterval(function(){
+				if (!demo1Played){	
+					$("#carousel-demovids .right.carousel-control").trigger("click");
+				}
+				if (!demo2Played) {
+					$("#carousel-demovids2 .right.carousel-control").trigger("click");
+				}
+				$("#next").trigger("click");
+            }, itemInterval);
+        }
+    };
+ 
+    InfiniteRotator.init();
 });
 
 /* =================================
-===  PARTNERS							 ====
+===  PARTNERS					====
 ====================================*/
 var angle = 0,
 galleryspin = function(sign) {
@@ -334,3 +343,109 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 	)
 	document.querySelector('head').appendChild(msViewportStyle)
 }
+
+/*=====================================
+====== CAROUSEL			===============
+=====================================*/
+var transformProp = Modernizr.prefixed('transform');
+
+    function Carousel3D ( el ) {
+      this.element = el;
+
+      this.rotation = 0;
+      this.panelCount = 0;
+      this.totalPanelCount = this.element.children.length;
+      this.theta = 0;
+
+      this.isHorizontal = false;
+
+    }
+
+    Carousel3D.prototype.modify = function() {
+
+      var panel, angle, i;
+
+      this.panelSize = this.element[ this.isHorizontal ? 'offsetWidth' : 'offsetHeight' ];
+      this.rotateFn = this.isHorizontal ? 'rotateY' : 'rotateX';
+      this.theta = 360 / this.panelCount;
+
+      // do some trig to figure out how big the carousel
+      // is in 3D space
+      this.radius = Math.round( ( this.panelSize / 2) / Math.tan( Math.PI / this.panelCount ) );
+
+      for ( i = 0; i < this.panelCount; i++ ) {
+        panel = this.element.children[i];
+        angle = this.theta * i;
+        panel.style.opacity = 1;
+        panel.style.backgroundColor = 'hsla(' + angle + ', 100%, 50%, 0.8)';
+        // rotate panel, then push it out in 3D space
+        panel.style[ transformProp ] = this.rotateFn + '(' + angle + 'deg) translateZ(' + this.radius + 'px)';
+      }
+
+      // hide other panels
+      for (  ; i < this.totalPanelCount; i++ ) {
+        panel = this.element.children[i];
+        panel.style.opacity = 0;
+        panel.style[ transformProp ] = 'none';
+      }
+
+      // adjust rotation so panels are always flat
+      this.rotation = Math.round( this.rotation / this.theta ) * this.theta;
+
+      this.transform();
+
+    };
+
+    Carousel3D.prototype.transform = function() {
+      // push the carousel back in 3D space,
+      // and rotate it
+      this.element.style[ transformProp ] = 'translateZ(-' + this.radius + 'px) ' + this.rotateFn + '(' + this.rotation + 'deg)';
+    };
+
+
+
+    var init = function() {
+
+
+      var carousel = new Carousel3D( document.getElementById('slideshow-carousel') ),
+          panelCountInput = document.getElementById('panel-count'),
+          axisButton = document.getElementById('toggle-axis'),
+          navButtons = document.querySelectorAll('#navigation button'),
+
+          onNavButtonClick = function( event ){
+            var increment = parseInt( event.target.getAttribute('data-increment') );
+            carousel.rotation += carousel.theta * increment * -1;
+            carousel.transform();
+          };
+
+      // populate on startup
+      carousel.panelCount = parseInt( panelCountInput.value, 10);
+      carousel.modify();
+
+
+      axisButton.addEventListener( 'click', function(){
+        carousel.isHorizontal = !carousel.isHorizontal;
+        carousel.modify();
+      }, false);
+
+      panelCountInput.addEventListener( 'change', function( event ) {
+        carousel.panelCount = event.target.value;
+        carousel.modify();
+      }, false);
+
+      for (var i=0; i < 2; i++) {
+        navButtons[i].addEventListener( 'click', onNavButtonClick, false);
+      }
+
+      document.getElementById('toggle-backface-visibility').addEventListener( 'click', function(){
+        carousel.element.toggleClassName('panels-backface-invisible');
+      }, false);
+
+      setTimeout( function(){
+        document.body.addClassName('ready');
+		$("#options").hide();
+      }, 0);
+
+    };
+
+    window.addEventListener( 'DOMContentLoaded', init, false);

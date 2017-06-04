@@ -1027,6 +1027,71 @@ section {
 .efficio .mobile-slideshow {
     display: none;
 }
+
+.slideshow-carousel-container {
+      width: 574px;
+      height: 324px;
+      position: relative;
+      margin: 100px auto 100px;
+      border: 1px solid #CCC;
+      -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+    }
+
+
+    #slideshow-carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+    }
+
+    .ready #slideshow-carousel {
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #slideshow-carousel.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #slideshow-carousel figure {
+      display: block;
+      position: absolute;
+      width: 550px;
+      height: 300px;
+      left: 10px;
+      top: 10px;
+      border: 2px solid black;
+      line-height: 116px;
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+	
+	#slideshow-carousel img {
+      width: 550px;
+      height: 300px;
+    }
+
+    .ready #slideshow-carousel figure {
+      -webkit-transition: opacity 1s, -webkit-transform 1s;
+         -moz-transition: opacity 1s, -moz-transform 1s;
+           -o-transition: opacity 1s, -o-transform 1s;
+              transition: opacity 1s, transform 1s;
+    }
+	
 /*---------------------------------------
    2.5 SECTION: VIDEO
 -----------------------------------------*/
@@ -1120,7 +1185,7 @@ section {
     padding: 10px;
     padding-top: 0px;
     text-align: left;
-    min-height: 95px;
+    min-height: 150px;
     line-height: 1.5em;
 }
 .video-box{
@@ -1742,8 +1807,7 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
 }
-/*.blog-posts .panel-heading:after {
-  content: '+';
+.blog-posts .panel-heading .icon {
   position: absolute;
   right: 1em;
   top: 0.9em;
@@ -1755,11 +1819,8 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
   background: #27ae60;
   box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.5), 0 1px 0 #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
-}*/
-.blog-posts input:checked + .panel-heading {
-  color: #27ae60;
 }
-.blog-posts input:checked + .panel-heading:after {
+.blog-posts .panel-heading.changed:after {
   content: '-';
   /* adjust line-height to vertically center icon */
   line-height: .8em;
@@ -1783,9 +1844,6 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 }
 .footer-sticky .blue-text{
     display: inline-block;
-}
-.footer-sticky .blue-text h6{
-    font-size: 14px !important;
 }
 .footer-sticky .logo-display {
     float:left;
@@ -1847,6 +1905,9 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
     box-shadow: none
 }
 
+.footer-sticky .blue-text h6{
+    font-size: 14px;
+}
 /*****************
 FOR MOBILE SCREENS
 *****************/
@@ -1928,14 +1989,33 @@ FOR MOBILE SCREENS
 	.footer-sticky .footer-col {
         margin: 0px;
         padding: 0px;
+		margin-left: -20px;
     }
     .footer-sticky .logo-display {
-        float: none;
+        padding: 0px;
+		padding-left: 12px;
+		margin: 0px;
     }
-    .footer-sticky .socials {
-        float: none;
+	.footer-sticky .socials a {
+        padding: 0px;
+		padding-left: 5px;
+		margin: 0px;
+		float: right;
     }
-    #slideshow-container {
+	.footer-sticky .blue-text {
+		padding-left: 15px;
+		padding-top: 3px;
+	}
+	.footer-sticky .socials {
+        padding: 0px;
+		padding-top: 13px;
+		padding-right: 15px;
+		margin: 0px;
+    }
+	.footer-sticky h6 {
+        font-size: 8px !important;
+    }
+    .slideshow-carousel-container {
         display: none;
     }
     .mobile-slideshow {
@@ -1943,7 +2023,10 @@ FOR MOBILE SCREENS
     }
     .footer-sticky {
         text-align: center;
-        width: 90%;
+		padding: 0px;
+		margin: 0px;
+		width: 100%;
+		height: 46px;
     }
 	.portfolio .step .step-box-left {
 	  height: 450px !important;
@@ -2031,14 +2114,33 @@ FOR MOBILE SCREENS
 	.footer-sticky .footer-col {
         margin: 0px;
         padding: 0px;
+		margin-left: -20px;
     }
     .footer-sticky .logo-display {
-        float: none;
+        padding: 0px;
+		padding-left: 12px;
+		margin: 0px;
     }
-    .footer-sticky .socials {
-        float: none;
+	.footer-sticky .socials a {
+        padding: 0px;
+		padding-left: 5px;
+		margin: 0px;
+		float: right;
     }
-    #slideshow-container {
+	.footer-sticky .blue-text {
+		padding-left: 15px;
+		padding-top: 3px;
+	}
+	.footer-sticky .socials {
+        padding: 0px;
+		padding-top: 13px;
+		padding-right: 15px;
+		margin: 0px;
+    }
+	.footer-sticky h6 {
+        font-size: 8px !important;
+    }
+    .slideshow-carousel-container {
         display: none;
     }
     .mobile-slideshow {
@@ -2046,7 +2148,10 @@ FOR MOBILE SCREENS
     }
     .footer-sticky {
         text-align: center;
-        width: 90%;
+		padding: 0px;
+		margin: 0px;
+		width: 100%;
+		height: 46px;
     }
 	.portfolio .step .step-box-left {
 	  height: 450px !important;
