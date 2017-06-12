@@ -231,6 +231,16 @@ $(document).ready(function () {
 			$(this).siblings().text("+");
 		}
 	});
+	
+	$('[data-toggle="popover"]').popover();
+	
+	$("#news .panel-heading").on('click', function(e) {
+		var offset = 20, //Offset of 20px
+			that = $(this);
+		$('html, body').animate({
+			scrollTop: that.offset().top + offset
+		}, 1000);
+	});
 });
 
 $(window).load(function() { //start after HTML, images have loaded
@@ -240,7 +250,7 @@ $(window).load(function() { //start after HTML, images have loaded
         init: function()
         {
             //interval between items (in milliseconds)
-            var itemInterval = 3000;
+            var itemInterval = 5000, efficioSlideInterval = 8000;
 
             //loop through the items
             var infiniteLoop = setInterval(function(){
@@ -250,8 +260,11 @@ $(window).load(function() { //start after HTML, images have loaded
 				if (!demo2Played) {
 					$("#carousel-demovids2 .right.carousel-control").trigger("click");
 				}
+            }, itemInterval),
+			
+			efficioInfiniteLoop = setInterval(function(){
 				$("#next").trigger("click");
-            }, itemInterval);
+            }, efficioSlideInterval);
         }
     };
  
@@ -357,7 +370,7 @@ var transformProp = Modernizr.prefixed('transform');
       this.totalPanelCount = this.element.children.length;
       this.theta = 0;
 
-      this.isHorizontal = false;
+      this.isHorizontal = true;
 
     }
 
@@ -403,19 +416,33 @@ var transformProp = Modernizr.prefixed('transform');
     };
 
 
-
+	var activeSlide = 1;
+	
     var init = function() {
 
 
-      var carousel = new Carousel3D( document.getElementById('slideshow-carousel') ),
+      var carousel = new Carousel3D(document.getElementById('slideshow-carousel')),
           panelCountInput = document.getElementById('panel-count'),
           axisButton = document.getElementById('toggle-axis'),
           navButtons = document.querySelectorAll('#navigation button'),
-
+		  
           onNavButtonClick = function( event ){
             var increment = parseInt( event.target.getAttribute('data-increment') );
             carousel.rotation += carousel.theta * increment * -1;
             carousel.transform();
+			var nextSlide = activeSlide + increment;
+			if (nextSlide == 0) {
+				activeSlide = 6;
+			}
+			else if (nextSlide == 7) {
+				activeSlide = 1;
+			}
+			else {
+				activeSlide = activeSlide + increment;
+			}
+			
+			$("#navigation span").removeClass("current-slide");
+			$("#s-" + activeSlide).addClass("current-slide");
           };
 
       // populate on startup

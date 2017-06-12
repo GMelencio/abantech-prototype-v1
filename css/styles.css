@@ -1027,12 +1027,34 @@ section {
 .efficio .mobile-slideshow {
     display: none;
 }
-
+.efficio .panel-heading {
+	cursor: pointer;
+}
+.efficio .panel-heading:hover {
+	background-color: #3886ce;
+	text-decoration: underline;
+}
+.efficio .carousel-controls {
+	font-weight: 500;
+	cursor: pointer;
+}
+.current-slide {
+	color: #3886ce !important;
+}
+#carousel-options {
+	margin-bottom: 20px;
+}
+.popover {
+	width: 450px;
+	max-width: 450px;
+	font-family: 'poppins', helvetica, sans-serif;
+	font-size: 15px;
+}
 .slideshow-carousel-container {
-      width: 574px;
-      height: 324px;
+      width: 566px;
+      height: 346px;
       position: relative;
-      margin: 100px auto 100px;
+      margin: 0px auto 20px;
       border: 1px solid #CCC;
       -webkit-perspective: 1100px;
          -moz-perspective: 1100px;
@@ -1068,8 +1090,8 @@ section {
     #slideshow-carousel figure {
       display: block;
       position: absolute;
-      width: 550px;
-      height: 300px;
+      width: 546px;
+      height: 326px;
       left: 10px;
       top: 10px;
       border: 2px solid black;
@@ -1081,8 +1103,8 @@ section {
     }
 	
 	#slideshow-carousel img {
-      width: 550px;
-      height: 300px;
+      width: 542px;
+      height: 322px;
     }
 
     .ready #slideshow-carousel figure {
@@ -1179,7 +1201,7 @@ section {
     padding: 5px;
     text-align: center;
     background-color: #ffffff;
-	min-height: 62px;
+	min-height: 90px;
 }
 .video-description {
     padding: 10px;
@@ -1908,6 +1930,11 @@ figure#spinner img:nth-child(8) { -webkit-transform: rotateY(-315deg); transform
 .footer-sticky .blue-text h6{
     font-size: 14px;
 }
+.click-to-read {
+	color: #3886ce;
+	font-weight: 500;
+}
+
 /*****************
 FOR MOBILE SCREENS
 *****************/
@@ -2015,7 +2042,7 @@ FOR MOBILE SCREENS
 	.footer-sticky h6 {
         font-size: 8px !important;
     }
-    .slideshow-carousel-container {
+    .slideshow-carousel-container, #carousel-options {
         display: none;
     }
     .mobile-slideshow {
@@ -2033,6 +2060,9 @@ FOR MOBILE SCREENS
 	}	
 	.portfolio .step .step-box-right {
 	  height: 450px !important;
+	}
+	.popover {
+		width: 290px;
 	}
 }
 
@@ -2140,7 +2170,7 @@ FOR MOBILE SCREENS
 	.footer-sticky h6 {
         font-size: 8px !important;
     }
-    .slideshow-carousel-container {
+    .slideshow-carousel-container, #carousel-options {
         display: none;
     }
     .mobile-slideshow {
@@ -2158,6 +2188,9 @@ FOR MOBILE SCREENS
 	}	
 	.portfolio .step .step-box-right {
 	  height: 450px !important;
+	}
+	.popover {
+		width: 290px;
 	}
 }
 
