@@ -225,7 +225,7 @@ $(document).ready(function () {
 	
 	$('.panel-title').on('click', function(e) {
 		if($(this).siblings().text() == "+") {
-			$(".icon").text("+");
+			$("#news .icon").text("+");
 			$(this).siblings().text("-");
 		} else {
 			$(this).siblings().text("+");
