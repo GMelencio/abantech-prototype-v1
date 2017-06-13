@@ -1027,12 +1027,76 @@ section {
 .efficio .mobile-slideshow {
     display: none;
 }
-.efficio .panel-heading {
-	cursor: pointer;
+#info-box-container1, #info-box-container2 {
+    position: relative;
+    overflow: hidden;
 }
-.efficio .panel-heading:hover {
-	background-color: #3886ce;
-	text-decoration: underline;
+#info-box-container1:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7;
+    background-image: url("../images/efficio/hardware_devs.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+#info-box-container2:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7;
+    background-image: url("../images/efficio/software_devs.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+#info-box-container1 h4, #info-box-container2 h4 {
+	color: #ffffff !important;
+	font-weight: 600;
+	-webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.efficio .info-box {
+	cursor: pointer;
+	padding: 10px;
+	z-index: 2;
+	position: relative;
+    color: #000000 !important;
+}
+.efficio .info-box p {
+	background: #000000;
+	opacity: 0.8;
+    color: #ffffff;
+	padding: 10px;
+	margin-top: -10px;
+}
+.efficio .info-box:hover {
+	opacity: 0.8;
+	background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(97, 97, 97, 0.6) 100%);
+	background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(97, 97, 97, 0.6) 100%);
+	-webkit-transition: all ease 0.25s;
+	transition: all ease 0.25s;
 }
 .efficio .carousel-controls {
 	font-weight: 500;
@@ -1045,16 +1109,18 @@ section {
 	margin-bottom: 20px;
 }
 .popover {
-	width: 450px;
-	max-width: 450px;
+	width: 500px;
+	max-width: 500px;
 	font-family: 'poppins', helvetica, sans-serif;
 	font-size: 15px;
+	margin-top: -130px !important;
+	line-height: 27px !important;
 }
 .slideshow-carousel-container {
       width: 566px;
       height: 346px;
       position: relative;
-      margin: 0px auto 20px;
+      margin: 20px auto 20px;
       border: 1px solid #CCC;
       -webkit-perspective: 1100px;
          -moz-perspective: 1100px;

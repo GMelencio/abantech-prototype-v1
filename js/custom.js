@@ -233,6 +233,7 @@ $(document).ready(function () {
 	});
 	
 	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="tooltip"]').tooltip();
 	
 	$("#news .panel-heading").on('click', function(e) {
 		var offset = 20, //Offset of 20px
