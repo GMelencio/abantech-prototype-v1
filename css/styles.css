@@ -837,6 +837,9 @@ section {
 .about-team-member {
   line-height: 20px;
 }
+#partners-logo img {
+	width: 200px;
+}
 /*---------------------------------------
   2.3. SECTION: EMBRACING REALITY
 ----------------------------------------*/
@@ -1030,6 +1033,7 @@ section {
 #info-box-container1, #info-box-container2 {
     position: relative;
     overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #info-box-container1:before {
     content: ' ';
@@ -1069,38 +1073,30 @@ section {
     -webkit-background-size: cover;
     background-size: cover;
 }
-#info-box-container1 h4, #info-box-container2 h4 {
+#info-box-container1 h5, #info-box-container2 h5 {
+	font-weight: 500;
 	color: #ffffff !important;
-	font-weight: 600;
-	-webkit-margin-before: 0.83em;
-    -webkit-margin-after: 0.83em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+	text-shadow: 1px 1px 1px #616161;
+	margin-top: -5px;
+	margin-bottom: 5px;
 }
 .efficio .info-box {
 	cursor: pointer;
-	padding: 10px;
+	padding: 20px;
 	z-index: 2;
 	position: relative;
-    color: #000000 !important;
-}
-.efficio .info-box p {
+    color: #ffffff !important;
+	text-shadow: 1px 1px 1px #616161;
 	background: #000000;
 	opacity: 0.8;
-    color: #ffffff;
-	padding: 10px;
-	margin-top: -10px;
-}
-.efficio .info-box:hover {
-	opacity: 0.8;
-	background: -webkit-linear-gradient(top, rgba(255, 0, 0, 0) 0%, rgba(97, 97, 97, 0.6) 100%);
-	background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(97, 97, 97, 0.6) 100%);
-	-webkit-transition: all ease 0.25s;
-	transition: all ease 0.25s;
 }
 .efficio .carousel-controls {
 	font-weight: 500;
 	cursor: pointer;
+}
+.efficio .video-caption {
+	margin-top: -40px;
+	min-height: auto !important;
 }
 .current-slide {
 	color: #3886ce !important;
@@ -1113,7 +1109,7 @@ section {
 	max-width: 500px;
 	font-family: 'poppins', helvetica, sans-serif;
 	font-size: 15px;
-	margin-top: -130px !important;
+	margin-top: -110px !important;
 	line-height: 27px !important;
 }
 .slideshow-carousel-container {
