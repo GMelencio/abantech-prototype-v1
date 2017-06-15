@@ -840,17 +840,33 @@ section {
   margin-bottom: 20px;
 }
 #our-team img {
-	width: 200px;
+	width: 100px;
+}
+#our-team h2 {
+	font-size: 35px;
+	margin-top: -15px;
+	margin-bottom: -5px;
+}
+#our-team h6 {
+	font-size: 14px;
+}
+#our-team h3 {
+	margin-top: -20px;
+	font-size: 25px;
+}
+#our-team .row {
+	margin-top: -2px;
 }
 .our-team {
-	padding: 40px;
+	padding: 20px;
 	padding-bottom: 0px;
 	border-bottom: #3886ce solid 4px;
 }
 .org-title {
-	line-height: 20px;
+	line-height: 12px;
 	margin-top: -10px;
 	margin-bottom: 10px;
+	font-size: 12px;
 }
 .loading-partners {
 	position:absolute;
@@ -866,6 +882,9 @@ section {
 	width:100%;
 	height:200px;
 	overflow:hidden;
+}
+.single-member {
+	cursor: pointer;
 }
 #our-partners img {
 	width: 200px;
@@ -1150,11 +1169,11 @@ section {
 	margin-bottom: 20px;
 }
 .popover {
-	width: 500px;
+	width: 400px;
 	max-width: 500px;
 	font-family: 'poppins', helvetica, sans-serif;
 	font-size: 15px;
-	margin-top: -110px !important;
+	margin-top: -70px !important;
 	line-height: 27px !important;
 }
 .slideshow-carousel-container {
