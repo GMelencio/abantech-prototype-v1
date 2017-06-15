@@ -2053,6 +2053,9 @@ FOR MOBILE SCREENS
       padding-top: 10px;
       padding-bottom: 15px;
     }
+	.about-box {
+		margin-right: 0px;
+	}
     .after-about-us h4 {
       font-size: 18px;
       line-height: 1.5em;
@@ -2181,6 +2184,9 @@ FOR MOBILE SCREENS
       padding-top: 10px;
       padding-bottom: 15px;
     }
+	.about-box {
+		margin-right: 0px;
+	}
     .after-about-us h4 {
       font-size: 18px;
       line-height: 1.5em;
