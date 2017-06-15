@@ -164,9 +164,6 @@ jQuery(document).ready(function ($) {
     });
 });
 
-/* ================================
-===  TESTIMONIALS              ====
-================================= */
 var demo1Played = false, demo2Played = false;
 $(document).ready(function () {
 

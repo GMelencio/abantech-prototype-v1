@@ -819,7 +819,7 @@ section {
 .about-box {
   background: #ffffff;
   position: relative;
-  margin-top: -15px;
+  margin-top: -40px;
   z-index: 10;
   overflow: hidden;
 }
@@ -838,7 +838,19 @@ section {
   line-height: 20px;
 }
 #partners-logo img {
-	width: 200px;
+	width: 150px;
+	cursor: pointer;
+}
+
+#partners-logo h2 {
+	font-size: 35px;
+	line-height: 40px;
+}
+
+.partners-list {
+	padding: 40px;
+	padding-bottom: 0px;
+	border-bottom: #3886ce solid 4px;
 }
 /*---------------------------------------
   2.3. SECTION: EMBRACING REALITY
